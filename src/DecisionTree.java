@@ -17,9 +17,7 @@ public class DecisionTree {
         rootNode = new TreeNode(rootDataSet);
         treeNodes.add(rootNode);
         int numberOfAttributes = (int) (Math.ceil(Math.sqrt(rootDataSet.getNumberOfAttributes() - 1)));
-        //attributesId = generateAttrIndexes(numberOfAttributes, rootDataSet.getNumberOfAttributes()-1);
-
-        attributesId = new int[] {13, 19, 31, 2, 24, 12};
+        attributesId = generateAttrIndexes(numberOfAttributes, rootDataSet.getNumberOfAttributes()-1);
         Arrays.stream(attributesId).forEach(i -> System.out.print(i +" "));
         System.out.println();
     }
